@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
-  },
+  "start": "NODE_ENV=production node src/server.js",
+  "dev": "NODE_ENV=development nodemon src/server.js",
+  "test": "jest",
+  "lint": "eslint ."
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
